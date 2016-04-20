@@ -8,10 +8,12 @@
 
 #import "MyCollectionViewLayout.h"
 
+#define kScreenWidth   [UIScreen mainScreen].bounds.size.width
 @implementation MyCollectionViewLayout
 
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
+    
    
     NSMutableArray *array = [NSMutableArray array];
     
@@ -22,8 +24,8 @@
         UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
         CGFloat x = 0;
         CGFloat y = 0;
-        CGFloat w = self.collectionView.bounds.size.width;
-        CGFloat h = self.collectionView.bounds.size.height;
+        CGFloat w = kScreenWidth;
+        CGFloat h = w;
         attrs.frame = CGRectMake(x, y, w, h);
         [array addObject:attrs];
         
@@ -32,15 +34,14 @@
         for (int i = 0; i < count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            CGFloat preW = self.collectionView.bounds.size.width / 2;
-            CGFloat preH = self.collectionView.bounds.size.height;
+            CGFloat preW = kScreenWidth / 2;
 
             if (i == 0) {
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
                 CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
@@ -48,7 +49,7 @@
                 CGFloat x = preW;
                 CGFloat y = 0;
                 CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }
@@ -59,14 +60,14 @@
         for (int i = 0; i < count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            CGFloat preW = self.collectionView.bounds.size.width / 3;
-            CGFloat preH = self.collectionView.bounds.size.height / 2;
+            CGFloat preW = kScreenWidth / 3;
+            CGFloat preH = kScreenWidth / 3;
             if (i == 0) {
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
                 CGFloat w = preW * 2;
-                CGFloat h = preH * 2;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
@@ -74,14 +75,14 @@
                 CGFloat x = preW * 2;
                 CGFloat y = 0;
                 CGFloat w = preW;
-                CGFloat h = self.collectionView.bounds.size.height * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
                 CGFloat x = preW * 2;
                 CGFloat y = preH;
                 CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }
@@ -91,8 +92,8 @@
         for (int i = 0; i < count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            CGFloat preW = self.collectionView.bounds.size.width / 2;
-            CGFloat preH = self.collectionView.bounds.size.height / 2;
+            CGFloat preW = kScreenWidth / 2;
+            CGFloat preH = kScreenWidth / 2;
             if (i == 0) {
                 
                 CGFloat x = 0;
@@ -130,16 +131,15 @@
         for (int i = 0; i < count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            CGFloat preW = self.collectionView.bounds.size.width / 2;
-            CGFloat preH = self.collectionView.bounds.size.height / 2;
-            CGFloat preW2 = self.collectionView.bounds.size.width / 3;
+            CGFloat preW = kScreenWidth / 2;
+            CGFloat preH = kScreenWidth / 3;
 
             if (i == 0) {
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
                 CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
@@ -147,28 +147,28 @@
                 CGFloat x = preW;
                 CGFloat y = 0;
                 CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
                 CGFloat x = 0;
-                CGFloat y = preH;
-                CGFloat w = preW2;
-                CGFloat h = preH;
+                CGFloat y = preW;
+                CGFloat w = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 3){
-                CGFloat x = preW2;
-                CGFloat y = preH;
-                CGFloat w = preW2;
-                CGFloat h = preH;
+                CGFloat x = preH;
+                CGFloat y = preW;
+                CGFloat w = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 4){
-                CGFloat x = preW2 * 2;
-                CGFloat y = preH;
-                CGFloat w = preW2;
-                CGFloat h = preH;
+                CGFloat x = preH * 2;
+                CGFloat y = preW;
+                CGFloat w = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }
@@ -178,8 +178,8 @@
         for (int i = 0; i < count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            CGFloat preW = self.collectionView.bounds.size.width / 3;
-            CGFloat preH = self.collectionView.bounds.size.height / 3;
+            CGFloat preW = kScreenWidth / 3;
+            CGFloat preH = kScreenWidth / 3;
 
             if (i == 0) {
                 
@@ -233,16 +233,17 @@
         for (int i = 0; i < count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            CGFloat preW = self.collectionView.bounds.size.width / 3;
-            CGFloat preH = self.collectionView.bounds.size.height / 3;
-            CGFloat preW2 = self.collectionView.bounds.size.width / 4;
-            
+            CGFloat preW = kScreenWidth / 3;
+            CGFloat preH = kScreenWidth / 3 ;
+            CGFloat preW2 = kScreenWidth / 4;
+            CGFloat preH2 = kScreenWidth / 4;
+
             if (i == 0) {
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
                 CGFloat w = preW * 2;
-                CGFloat h = preH * 2;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
@@ -250,42 +251,42 @@
                 CGFloat x = preW * 2;
                 CGFloat y = 0;
                 CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
                 CGFloat x = preW * 2;
                 CGFloat y = preH;
                 CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 3){
                 CGFloat x = 0;
                 CGFloat y = preH * 2;
-                CGFloat w = preW2;
-                CGFloat h = preH;
+                CGFloat w = preH2;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 4){
-                CGFloat x = preW2;
+                CGFloat x = preH2;
                 CGFloat y = preH * 2;
-                CGFloat w = preW2;
-                CGFloat h = preH;
+                CGFloat w = preH2;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 5){
-                CGFloat x = preW2 * 2;
+                CGFloat x = preH2 * 2;
                 CGFloat y = preH * 2;
-                CGFloat w = preW2;
-                CGFloat h = preH;
+                CGFloat w = preH2;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 6){
                 CGFloat x = preW2 * 3;
                 CGFloat y = preH * 2;
                 CGFloat w = preW2;
-                CGFloat h = preH;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
 
@@ -297,8 +298,8 @@
         for (int i = 0; i < count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            CGFloat preW = self.collectionView.bounds.size.width / 4;
-            CGFloat preH = self.collectionView.bounds.size.height / 4;
+            CGFloat preW = kScreenWidth / 4;
+            CGFloat preH = kScreenWidth / 4;
 
             if (i == 0) {
                 
@@ -367,8 +368,8 @@
         for (int i = 0; i < count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            CGFloat preW = self.collectionView.bounds.size.width / 3;
-            CGFloat preH = self.collectionView.bounds.size.height / 3;
+            CGFloat preW = kScreenWidth / 3;
+            CGFloat preH = kScreenWidth / 3;
 
             if (i == 0) {
                 

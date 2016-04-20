@@ -70,7 +70,7 @@
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(weakSelf.contentView.mas_leading);
         make.trailing.equalTo(weakSelf.contentView.mas_trailing);
-        make.bottom.equalTo(weakSelf.contentView.mas_bottom);
+        make.height.equalTo(weakSelf.contentView.mas_width);
         make.top.equalTo(weakSelf.timeLab.mas_bottom).offset(10);
     }];
     
@@ -94,7 +94,7 @@
 {
     if (!_collectionView) {
         MyCollectionViewLayout *layout = [[MyCollectionViewLayout alloc] init];
-        layout.type = MyLayoutTypeWithSevenItem;
+        layout.type = MyLayoutTypeWithNightItem;
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         collectionView.delegate = self;
         collectionView.dataSource = self;

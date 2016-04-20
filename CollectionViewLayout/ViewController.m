@@ -46,10 +46,16 @@
         return emptyCell;
     }else{
         MyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.type = (int)indexPath.row;
         return cell;
     }
     return nil;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -62,7 +68,7 @@
     if (indexPath.row %2 != 1) {
         return 10;
     }else{
-        return 300;
+        return [UIScreen mainScreen].bounds.size.width +100 ;
     }
 }
 
