@@ -40,13 +40,13 @@
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
-                CGFloat w = preW;
+                CGFloat w = preW-_minLineSpace*0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
                 
-                CGFloat x = preW;
+                CGFloat x = preW+_minLineSpace*0.5;
                 CGFloat y = 0;
                 CGFloat w = preW;
                 CGFloat h = w;
@@ -66,21 +66,21 @@
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
-                CGFloat w = preW * 2;
+                CGFloat w = preW * 2-_minLineSpace*0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
                 
-                CGFloat x = preW * 2;
+                CGFloat x = preW * 2+_minLineSpace*0.5;
                 CGFloat y = 0;
-                CGFloat w = preW;
+                CGFloat w = preW-_minLineSpace*0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
                 CGFloat x = preW * 2;
-                CGFloat y = preH;
+                CGFloat y = preH+_minLineSpace * 0.5;
                 CGFloat w = preW;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
@@ -98,30 +98,30 @@
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat w = preW-_minLineSpace *0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
                 
-                CGFloat x = preW;
+                CGFloat x = preW + _minLineSpace * 0.5;
                 CGFloat y = 0;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat w = preW-_minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
                 CGFloat x = 0;
-                CGFloat y = preH;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat y = preH+ _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 3){
-                CGFloat x = preW;
-                CGFloat y = preH;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW + _minLineSpace * 0.5;
+                CGFloat y = preH + _minLineSpace * 0.5;
+                CGFloat w = preW-_minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }
@@ -138,36 +138,36 @@
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
-                CGFloat w = preW;
+                CGFloat w = preW-_minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
                 
-                CGFloat x = preW;
+                CGFloat x = preW + _minLineSpace * 0.5;
                 CGFloat y = 0;
-                CGFloat w = preW;
+                CGFloat w = preW - _minLineSpace *0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
                 CGFloat x = 0;
-                CGFloat y = preW;
-                CGFloat w = preH;
+                CGFloat y = preW + _minLineSpace * 0.5;
+                CGFloat w = preH -_minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 3){
-                CGFloat x = preH;
-                CGFloat y = preW;
-                CGFloat w = preH;
+                CGFloat x = preH + _minLineSpace * 0.5;
+                CGFloat y = preW + _minLineSpace * 0.5;
+                CGFloat w = preH-_minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 4){
-                CGFloat x = preH * 2;
-                CGFloat y = preW;
-                CGFloat w = preH;
+                CGFloat x = preH * 2 + _minLineSpace * 0.5;
+                CGFloat y = preW +_minLineSpace * 0.5;
+                CGFloat w = preH - _minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
@@ -185,44 +185,44 @@
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
-                CGFloat w = preW * 2;
-                CGFloat h = preH * 2;
+                CGFloat w = preW * 2 - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
                 
-                CGFloat x = preW * 2;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
                 CGFloat y = 0;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat w = preW -_minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
-                CGFloat x = preW * 2;
-                CGFloat y = preH;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
+                CGFloat y = preH + _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 3){
                 CGFloat x = 0;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat y = preH * 2 - _minLineSpace * 0.5;
+                CGFloat w = preW + _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 4){
-                CGFloat x = preW;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW + _minLineSpace * 0.5;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 5){
-                CGFloat x = preW * 2;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preW -_minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }
@@ -242,50 +242,50 @@
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
-                CGFloat w = preW * 2;
+                CGFloat w = preW * 2 - _minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
                 
-                CGFloat x = preW * 2;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
                 CGFloat y = 0;
-                CGFloat w = preW;
+                CGFloat w = preW - _minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
-                CGFloat x = preW * 2;
-                CGFloat y = preH;
-                CGFloat w = preW;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
+                CGFloat y = preH + _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace *0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 3){
                 CGFloat x = 0;
-                CGFloat y = preH * 2;
-                CGFloat w = preH2;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preH2 - _minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 4){
-                CGFloat x = preH2;
-                CGFloat y = preH * 2;
-                CGFloat w = preH2;
+                CGFloat x = preH2 + _minLineSpace * 0.5;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preH2 - _minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 5){
-                CGFloat x = preH2 * 2;
-                CGFloat y = preH * 2;
-                CGFloat w = preH2;
+                CGFloat x = preH2 * 2 + _minLineSpace * 0.5;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preH2 - _minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 6){
-                CGFloat x = preW2 * 3;
-                CGFloat y = preH * 2;
-                CGFloat w = preW2;
+                CGFloat x = preW2 * 3 + _minLineSpace * 0.5;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5 ;
+                CGFloat w = preW2 - _minLineSpace * 0.5;
                 CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
@@ -305,59 +305,59 @@
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
-                CGFloat w = preW * 3;
-                CGFloat h = preH * 3;
+                CGFloat w = preW * 3 - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
                 
-                CGFloat x = preW * 3;
+                CGFloat x = preW * 3 + _minLineSpace * 0.5;
                 CGFloat y = 0;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
-                CGFloat x = preW * 3;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW * 3 + _minLineSpace * 0.5;
+                CGFloat y = preH  + _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 3){
-                CGFloat x = preW * 3;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW * 3 + _minLineSpace * 0.5;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preW-_minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 4){
                 CGFloat x = 0;
-                CGFloat y = preH * 3;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat y = preH * 3 + _minLineSpace *0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 5){
-                CGFloat x = preW ;
-                CGFloat y = preH * 3;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW + _minLineSpace * 0.5;
+                CGFloat y = preH * 3 + _minLineSpace *0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 6){
-                CGFloat x = preW * 2;
-                CGFloat y = preH * 3;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
+                CGFloat y = preH * 3 + _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
                 
             }else if (i == 7){
-                CGFloat x = preW * 3;
-                CGFloat y = preH * 3;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW * 3 + _minLineSpace * 0.5;
+                CGFloat y = preH * 3 + _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace *0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }
@@ -375,66 +375,66 @@
                 
                 CGFloat x = 0;
                 CGFloat y = 0;
-                CGFloat w = preW ;
-                CGFloat h = preH ;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w ;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 1){
                 
-                CGFloat x = preW * 2;
+                CGFloat x = preW + _minLineSpace * 0.5;
                 CGFloat y = 0;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat w = preW - _minLineSpace *0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 2){
-                CGFloat x = preW * 3;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
                 CGFloat y = 0;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 3){
                 CGFloat x = 0;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat y = preH  + _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 4){
-                CGFloat x = preW;
-                CGFloat y = preH ;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW + _minLineSpace * 0.5;
+                CGFloat y = preH + _minLineSpace * 0.5 ;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 5){
-                CGFloat x = preW * 2;
-                CGFloat y = preH ;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
+                CGFloat y = preH + _minLineSpace * 0.5 ;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 6){
                 CGFloat x = 0;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preW + _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
                 
             }else if (i == 7){
-                CGFloat x = preW;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW + _minLineSpace * 0.5;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preW - _minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }else if (i == 8){
-                CGFloat x = preW * 2;
-                CGFloat y = preH * 2;
-                CGFloat w = preW;
-                CGFloat h = preH;
+                CGFloat x = preW * 2 + _minLineSpace * 0.5;
+                CGFloat y = preH * 2 + _minLineSpace * 0.5;
+                CGFloat w = preW -_minLineSpace * 0.5;
+                CGFloat h = w;
                 attrs.frame = CGRectMake(x, y, w, h);
                 [array addObject:attrs];
             }

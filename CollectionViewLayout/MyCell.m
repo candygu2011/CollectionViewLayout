@@ -79,9 +79,11 @@
 {
     _type = type;
     
+    MyCollectionViewLayout *layout = (MyCollectionViewLayout *)self.collectionView.collectionViewLayout;
+    layout.type = type;
+    
     [self setUpView];
-
-    [self.collectionView reloadData];
+    [_collectionView reloadData];
     
 }
 - (MyCollectionViewLayout *)myLayoutWithType:(int)type
@@ -129,14 +131,19 @@
 {
     return 9;
 }
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"collectionView = %ld",(long)indexPath.item);
+}
 
 
 -(UICollectionView *)collectionView
 {
     if (!_collectionView) {
         MyCollectionViewLayout *layout = [self myLayoutWithType:self.type];
+        layout.minLineSpace = 1;
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+        collectionView.backgroundColor = [UIColor whiteColor];
         collectionView.delegate = self;
         collectionView.dataSource = self;
         _collectionView = collectionView;

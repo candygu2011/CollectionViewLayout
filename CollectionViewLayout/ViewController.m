@@ -47,7 +47,8 @@
     }else{
         MyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.type = (int)indexPath.row;
+        cell.type = (int)indexPath.row/2;
+        NSLog(@"type = %d",cell.type);
         return cell;
     }
     return nil;
@@ -60,7 +61,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 18;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
