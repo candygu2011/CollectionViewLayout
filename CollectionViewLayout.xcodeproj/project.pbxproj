@@ -14,6 +14,7 @@
 		3426124E1CC6605100752BAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3426124D1CC6605100752BAC /* Assets.xcassets */; };
 		342612511CC6605100752BAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3426124F1CC6605100752BAC /* LaunchScreen.storyboard */; };
 		3426125A1CC662E300752BAC /* MyCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 342612591CC662E300752BAC /* MyCollectionViewLayout.m */; };
+		342612601CC9216E00752BAC /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426125F1CC9216E00752BAC /* UIViewExt.m */; settings = {ASSET_TAGS = (); }; };
 		ABA7E99E1CC71A2500A5C58A /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA7E99D1CC71A2500A5C58A /* MyCell.m */; };
 		ABA7E9BA1CC71C4300A5C58A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABA7E9A01CC71C4300A5C58A /* Info.plist */; };
 		ABA7E9BB1CC71C4300A5C58A /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA7E9A21CC71C4300A5C58A /* MASCompositeConstraint.m */; };
@@ -41,6 +42,8 @@
 		342612521CC6605100752BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		342612581CC662E300752BAC /* MyCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewLayout.h; sourceTree = "<group>"; };
 		342612591CC662E300752BAC /* MyCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewLayout.m; sourceTree = "<group>"; };
+		3426125E1CC9216E00752BAC /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		3426125F1CC9216E00752BAC /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		ABA7E99C1CC71A2500A5C58A /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		ABA7E99D1CC71A2500A5C58A /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
 		ABA7E9A01CC71C4300A5C58A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 		ABA7E99F1CC71C4300A5C58A /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				3426125E1CC9216E00752BAC /* UIViewExt.h */,
+				3426125F1CC9216E00752BAC /* UIViewExt.m */,
 				ABA7E9A01CC71C4300A5C58A /* Info.plist */,
 				ABA7E9A11CC71C4300A5C58A /* MASCompositeConstraint.h */,
 				ABA7E9A21CC71C4300A5C58A /* MASCompositeConstraint.m */,
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342612601CC9216E00752BAC /* UIViewExt.m in Sources */,
 				ABA7E9C21CC71C4300A5C58A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				342612491CC6605100752BAC /* ViewController.m in Sources */,
 				ABA7E9C01CC71C4300A5C58A /* MASViewConstraint.m in Sources */,
