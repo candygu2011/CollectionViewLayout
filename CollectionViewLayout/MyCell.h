@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MyCell : UITableViewCell
+
 @property (nonatomic,assign) int type;
 
 @end

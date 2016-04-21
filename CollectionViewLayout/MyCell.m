@@ -30,7 +30,6 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        [self setUpView];
     }
     return self;
 }
@@ -76,6 +75,49 @@
     
 }
 
+-(void)setType:(int)type
+{
+    _type = type;
+    
+    [self setUpView];
+
+    [self.collectionView reloadData];
+    
+}
+- (MyCollectionViewLayout *)myLayoutWithType:(int)type
+{
+    MyCollectionViewLayout *layout = [[MyCollectionViewLayout alloc] init];
+    if (type == 1) {
+        layout.type = MyLayoutTypeWithOneItem;
+        
+    }else if (type == 2){
+        layout.type = MyLayoutTypeWithTowItem;
+
+    }else if (type == 3){
+        layout.type = MyLayoutTypeWithThreeItem;
+        
+    }else if (type == 4){
+        layout.type = MyLayoutTypeWithFourItem;
+        
+    }else if (type == 5){
+        layout.type = MyLayoutTypeWithFiveItem;
+        
+    }else if (type == 6){
+        layout.type = MyLayoutTypeWithSixItem;
+        
+    }else if (type == 7){
+        layout.type = MyLayoutTypeWithSevenItem;
+        
+    }else if (type == 8){
+        layout.type = MyLayoutTypeWithEightItem;
+        
+    }else if (type == 9){
+        layout.type = MyLayoutTypeWithNightItem;
+        
+    }
+    return layout;
+}
+
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
@@ -93,8 +135,7 @@
 -(UICollectionView *)collectionView
 {
     if (!_collectionView) {
-        MyCollectionViewLayout *layout = [[MyCollectionViewLayout alloc] init];
-        layout.type = MyLayoutTypeWithNightItem;
+        MyCollectionViewLayout *layout = [self myLayoutWithType:self.type];
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         collectionView.delegate = self;
         collectionView.dataSource = self;
