@@ -7,6 +7,7 @@
 //
 
 #import "MyCollectionViewLayout.h"
+#import "MyCollectionViewCell.h"
 
 #define kScreenWidth   [UIScreen mainScreen].bounds.size.width
 @implementation MyCollectionViewLayout
@@ -447,6 +448,13 @@
     
     
     return array;
+}
+
+-(void)prepareLayout
+{
+    [super prepareLayout];
+    [self registerClass:[MyCollectionViewCell class] forDecorationViewOfKind:@"MyCollec"];
+    
 }
 
 @end

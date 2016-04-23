@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MyCollectionViewCell;
+@protocol MyCellSelectedDelegate<NSObject>
+- (void)myCell:(UITableViewCell*)cell didSelectedCollectionViewCell:(MyCollectionViewCell *)collectionCell atIndexPath:(NSIndexPath *)indexPath;
+
+@end
 
 @interface MyCell : UITableViewCell
 
 @property (nonatomic,assign) int type;
+
+@property (nonatomic,weak) id<MyCellSelectedDelegate> delegate;
 
 @end

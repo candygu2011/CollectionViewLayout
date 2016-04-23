@@ -9,6 +9,7 @@
 #import "MyCell.h"
 #import "Masonry.h"
 #import "MyCollectionViewLayout.h"
+#import "MyCollectionViewCell.h"
 
 @interface MyCell ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -81,7 +82,7 @@
     
     MyCollectionViewLayout *layout = (MyCollectionViewLayout *)self.collectionView.collectionViewLayout;
     layout.type = type;
-    
+    [_collectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"MyCollectionViewCell"];
     [self setUpView];
     [_collectionView reloadData];
     
@@ -122,7 +123,7 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    MyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCollectionViewCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
     return cell;
 }
@@ -134,8 +135,16 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"collectionView = %ld",(long)indexPath.item);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(myCell:didSelectedCollectionViewCell:atIndexPath:)]) {
+        MyCollectionViewCell *cell = (MyCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        [self.delegate myCell:self didSelectedCollectionViewCell:cell atIndexPath:indexPath];
+        
+    }
+    
 }
-
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(([UIScreen mainScreen].bounds.size.width - 80) / 3, ([UIScreen mainScreen].bounds.size.width  - 80) / 3 + 20);
+}
 
 -(UICollectionView *)collectionView
 {
