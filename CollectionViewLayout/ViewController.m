@@ -10,8 +10,6 @@
 #import "MyCollectionViewLayout.h"
 #import "MyCell.h"
 #import "AttachModel.h"
-#import "MJPhotoBrowser.h"
-#import "MJPhoto.h"
 #import "MyCollectionViewCell.h"
 #import "UIImageView+WebCache.h"
 #define RGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
@@ -95,27 +93,7 @@
 -(void)myCell:(UITableViewCell *)cell didSelectedCollectionViewCell:(MyCollectionViewCell *)collectionCell atIndexPath:(NSIndexPath *)indexPath
 {
     
-    //1.创建图片浏览器
-    MJPhotoBrowser *brower = [[MJPhotoBrowser alloc] init];
-    //2.告诉图片浏览器显示所有的图片
-    NSMutableArray *photos = [NSMutableArray array];
-    for (int i = 0 ; i < _data.count; i++) {
-        AttachModel *model = _data[i];
-        //传递数据给浏览器
-        MJPhoto *photo = [[MJPhoto alloc] init];
-        photo.url = [NSURL URLWithString:model.attach_big_url];
-
-        UIImageView *img = (UIImageView *)collectionCell.imageView;
-        photo.srcImageView = img; //设置来源哪一个UIImageView
-        [photos addObject:photo];
-    }
-    brower.photos = photos;
-    //3.设置默认显示的图片索引
-    brower.currentPhotoIndex = indexPath.item;
-    
-    //4.显示浏览器
-    [brower show];
-}
+   }
 
 
 @end
