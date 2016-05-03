@@ -9,11 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface AttachModel : NSObject
-@property (nonatomic,assign)  int attach_id;
-@property (nonatomic,copy) NSString *attach_url;
-@property (nonatomic,copy) NSString *attach_thumb_url;
-@property (nonatomic,copy) NSString *attach_big_url;
-@property (nonatomic,assign)  int attach_count;
+@property (nonatomic,assign)  int bid;
+@property (nonatomic,copy) NSString *link;
+@property (nonatomic,copy) NSString *thumb;
+@property (nonatomic,copy) NSString *title;
 
 
 @end
